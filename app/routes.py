@@ -2,8 +2,8 @@ from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import LoginForm
 
-
-@app.route('/')  # decorator modifies function that follows it
+# decorators extend behavior of function without explicitly modifying it
+@app.route('/') 
 @app.route('/index')  # use decorator to register function as 'callback'
 def index():  # these decorators create an association with url and the index function
     user = {'username': 'Fisher'}
